@@ -1,7 +1,7 @@
 class User < ApplicationRecord
     include Authority::UserAbilities
   attr_accessor :username
-  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
+  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :authentication_keys => [:username]
 
   validates_uniqueness_of :username
   validates_presence_of :username
