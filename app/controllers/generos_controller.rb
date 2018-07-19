@@ -24,15 +24,17 @@ class GenerosController < ApplicationController
   # POST /generos
   # POST /generos.json
   def create
+    def updatable_by?(user)
+      resource.author == user || user.has_role?(:admin)
+    end
+
     @genero = Genero.new(genero_params)
 
     respond_to do |format|
       if @genero.save
         format.html { redirect_to @genero, notice: 'Genero was successfully created.' }
-        format.json { render :show, status: :created, location: @genero }
       else
         format.html { render :new }
-        format.json { render json: @genero.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -40,13 +42,15 @@ class GenerosController < ApplicationController
   # PATCH/PUT /generos/1
   # PATCH/PUT /generos/1.json
   def update
+    def updatable_by?(user)
+      resource.author == user || user.has_role?(:admin)
+    end
+
     respond_to do |format|
       if @genero.update(genero_params)
         format.html { redirect_to @genero, notice: 'Genero was successfully updated.' }
-        format.json { render :show, status: :ok, location: @genero }
       else
         format.html { render :edit }
-        format.json { render json: @genero.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -54,10 +58,13 @@ class GenerosController < ApplicationController
   # DELETE /generos/1
   # DELETE /generos/1.json
   def destroy
+    def updatable_by?(user)
+      resource.author == user || user.has_role?(:admin)
+    end
+    
     @genero.destroy
     respond_to do |format|
       format.html { redirect_to generos_url, notice: 'Genero was successfully destroyed.' }
-      format.json { head :no_content }
     end
   end
 
