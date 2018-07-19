@@ -16,4 +16,18 @@ module LocOwnee
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
   end
+
+  #configurando a gem 'rack-cors'
+  config.middleware.insert_before 0, Rack::Cors do
+    allow do
+      origins '*'
+      resource '*',
+      headers: :any,
+      methods: %i(get)
+    end
+ end
+
+#configurando a gem 'rack-attack'
+config.middleware.use Rack::Attack
+
 end
