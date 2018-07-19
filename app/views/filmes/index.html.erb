@@ -16,7 +16,7 @@
     <% @filmes.each do |filme| %>
       <tr>
         <td><%= filme.nome %></td>
-        <td><%= filme.genero_filme %></td>
+        <td><%= filme.genero_id %></td>
         <td><%= filme.preco_de_locacao %></td>
         <td><%= link_to 'Show', filme %></td>
         <td><%= link_to 'Edit', edit_filme_path(filme) %></td>
