@@ -18,12 +18,12 @@
 
   <div class="field">
     <%= form.label :genero_id %>
-    <%= form.text_field :genero_id %>
+    <%= form.hidden_field :genero_id, :value => "1" %>
   </div>
 
   <div class="field">
     <%= form.label :preco_de_locacao %>
-    <%= form.text_field :preco_de_locacao %>
+    <%= form.number_field :preco_de_locacao, step: 0.5 %>
   </div>
 
   <div class="actions">
