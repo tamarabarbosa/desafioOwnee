@@ -1,0 +1,32 @@
+<div class="navbar navbar-default navbar-static-top active">
+      <div class="container">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+       <a><%= link_to "To de Olho", root_path, "class" => 'navbar-brand' %></a>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+          <ul class="nav navbar-nav">
+             <li><%= link_to "Inicio", home_index_path  %></li>
+             <% if user_signed_in? %>
+            <li><%= link_to "Todos Os Filmes", filmes_path  %></li>
+            <li><%= link_to "Gêneros" , generos_path  %></li>
+
+            <% end %>
+          </ul>
+           <% if user_signed_in? %>
+          <ul class="nav navbar-nav navbar-right">
+          <div class="btn-group " >
+      <button type="button" class=" btn btn-success btn-lg dropdown-toggle icon-white icon-user pull-right"data-toggle="dropdown">
+      Usuario <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu">
+        <li class="divider"></li>
+      </ul>
+       <a> <%= link_to "Sair", destroy_user_session_path, :method => :delete, :class => 'btn btn-lg  btn-danger ' %></a>
+    </div>
+            </ul>
+            <%end%>
+        </div>
+      </div>
+</div>

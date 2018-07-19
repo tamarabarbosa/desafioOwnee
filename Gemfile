@@ -66,4 +66,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'authority'
 gem 'rolify'
-gem 'cancancan' 
+gem 'cancancan'
+gem "font-awesome-rails"
+gem 'bootstrap', '~> 4.1.1'

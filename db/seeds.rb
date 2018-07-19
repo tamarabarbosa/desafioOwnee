@@ -1,19 +1,19 @@
 Genero.create([
-  {id => 1, :nome => 'Ação', :created_at => "2018-07-19", :updated_at => "2018-07-19"},
-  {id => 2, :nome => 'Animação', :created_at => "2018-07-19", :updated_at => "2018-07-19"},
-  {id => 3, :nome => 'Aventura', :created_at => "2018-07-19", :updated_at => "2018-07-19"},
-  {id => 4, :nome => 'Comédia', :created_at => "2018-07-19", :updated_at => "2018-07-19"},
-  {id => 5, :nome => 'Documentário', :created_at => "2018-07-19", :updated_at => "2018-07-19"},
-  {id => 6, :nome => 'Fantasia', :created_at => "2018-07-19", :updated_at => "2018-07-19"},
-  {id => 7, :nome => 'Faroeste', :created_at => "2018-07-19", :updated_at => "2018-07-19"},
-  {id => 8, :nome => 'Ficção científica', :created_at => "2018-07-19", :updated_at => "2018-07-19"},
-  {id => 9, :nome => 'Guerra', :created_at => "2018-07-19", :updated_at => "2018-07-19"},
-  {id => 10, :nome => 'Musical', :created_at => "2018-07-19", :updated_at => "2018-07-19"},
-  {id => 11, :nome => 'Pornográfico', :created_at => "2018-07-19", :updated_at => "2018-07-19"},
-  {id => 12, :nome => 'Romance', :created_at => "2018-07-19", :updated_at => "2018-07-19"},
-  {id => 13, :nome => 'Suspense', :created_at => "2018-07-19", :updated_at => "2018-07-19"},
-  {id => 14, :nome => 'Terror', :created_at => "2018-07-19", :updated_at => "2018-07-19"},
-  {id => 15, :nome => 'Drama', :created_at => "2018-07-19", :updated_at => "2018-07-19"}
+  {:id => 1, :nome => 'Ação', :created_at => "2018-07-19", :updated_at => "2018-07-19"},
+  {:id => 2, :nome => 'Animação', :created_at => "2018-07-19", :updated_at => "2018-07-19"},
+  {:id => 3, :nome => 'Aventura', :created_at => "2018-07-19", :updated_at => "2018-07-19"},
+  {:id => 4, :nome => 'Comédia', :created_at => "2018-07-19", :updated_at => "2018-07-19"},
+  {:id => 5, :nome => 'Documentário', :created_at => "2018-07-19", :updated_at => "2018-07-19"},
+  {:id => 6, :nome => 'Fantasia', :created_at => "2018-07-19", :updated_at => "2018-07-19"},
+  {:id => 7, :nome => 'Faroeste', :created_at => "2018-07-19", :updated_at => "2018-07-19"},
+  {:id => 8, :nome => 'Ficção científica', :created_at => "2018-07-19", :updated_at => "2018-07-19"},
+  {:id => 9, :nome => 'Guerra', :created_at => "2018-07-19", :updated_at => "2018-07-19"},
+  {:id => 10, :nome => 'Musical', :created_at => "2018-07-19", :updated_at => "2018-07-19"},
+  {:id => 11, :nome => 'Pornográfico', :created_at => "2018-07-19", :updated_at => "2018-07-19"},
+  {:id => 12, :nome => 'Romance', :created_at => "2018-07-19", :updated_at => "2018-07-19"},
+  {:id => 13, :nome => 'Suspense', :created_at => "2018-07-19", :updated_at => "2018-07-19"},
+  {:id => 14, :nome => 'Terror', :created_at => "2018-07-19", :updated_at => "2018-07-19"},
+  {:id => 15, :nome => 'Drama', :created_at => "2018-07-19", :updated_at => "2018-07-19"}
   ])
 
 Filme.create([

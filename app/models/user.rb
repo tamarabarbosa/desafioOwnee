@@ -1,7 +1,6 @@
 class User < ApplicationRecord
     include Authority::UserAbilities
-  attr_accessor :username
-  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :authentication_keys => [:username]
+  devise :database_authenticatable, :registerable
 
   validates_uniqueness_of :username
   validates_presence_of :username
@@ -15,11 +14,6 @@ class User < ApplicationRecord
     username = conditions.delete(:username)
     where(conditions).where(["lower(username) = :value", { :value => username.downcase }]).first
  end
-  rolify
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :rememberable, :trackable
 
          def email_required?
           false
