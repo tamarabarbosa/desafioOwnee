@@ -10,23 +10,24 @@
       </ul>
     </div>
   <% end %>
-
+<div class="form-group">
   <div class="field">
-    <%= form.label :nome %>
+    Nome
     <%= form.text_field :nome %>
   </div>
 
   <div class="field">
-    <%= form.label :genero_id %>
-    <%= form.hidden_field :genero_id, :value => "1" %>
+    Gênero
+    <%= form.collection_select :genero_id, Genero.all, :id, :nome, :selected => @filme.genero %>
   </div>
 
   <div class="field">
-    <%= form.label :preco_de_locacao %>
-    <%= form.number_field :preco_de_locacao, step: 0.5 %>
+    Preço de Locação
+    <%= form.number_field :preco_de_locacao, step: 0.5, min: 0 %>
   </div>
-
   <div class="actions">
     <%= form.submit "Confirmar", :class => 'btn' %>
   </div>
+</div>
+
 <% end %>

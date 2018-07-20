@@ -69,3 +69,4 @@ gem 'rolify'
 gem 'cancancan'
 gem "font-awesome-rails"
 gem "twitter-bootstrap-rails"
+gem 'simple_form'
