@@ -71,4 +71,4 @@ gem "font-awesome-rails"
 gem "twitter-bootstrap-rails"
 gem 'simple_form'
 gem 'rails_12factor', group: :production
-gem 'sqlite3', '~>1.3.13'
+gem 'pg'
