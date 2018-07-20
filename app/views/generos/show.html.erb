@@ -1,9 +1,35 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Nome:</strong>
-  <%= @genero.nome %>
-</p>
 
-<%= link_to 'Edit', edit_genero_path(@genero) %> |
-<%= link_to 'Back', generos_path %>
+  <%= @genero.nome %>
+
+  <table class = "table table-striped" style="width: 60%" align="center">
+    <thead>
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Gênero</th>
+        <th scope="col">Preço de locação</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @filmes.each do |filme|  %>
+      <% if filme.genero == @genero %>
+        <tr>
+          <td scope="row"><%= filme.nome %></td>
+          <td scope="row"><%= filme.genero_id %></td>
+          <td scope="row"><%= filme.preco_de_locacao %></td>
+          <td scope="row"><%= link_to 'Pedido'  %></td>
+          <td scope="row"><%= link_to 'Show', filme %></td>
+          <td scope="row"><%= link_to 'Edit', edit_filme_path(filme) %></td>
+          <td scope="row"><%= link_to 'Destroy', filme, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+      <% end %>
+    </tbody>
+  </table>
+
+
+<%= link_to 'Editar', edit_genero_path(@genero) %> | <%= button_to "Remover", @genero, :method => :delete %> |
+<%= link_to 'Voltar', home_index_path %>

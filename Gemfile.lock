@@ -49,16 +49,10 @@ GEM
     arel (9.0.0)
     authority (3.3.0)
       activesupport (>= 3.0.0)
-    autoprefixer-rails (9.0.0)
-      execjs
     bcrypt (3.1.12)
     bindex (0.5.0)
     bootsnap (1.3.1)
       msgpack (~> 1.0)
-    bootstrap (4.1.1)
-      autoprefixer-rails (>= 6.0.3)
-      popper_js (>= 1.12.9, < 2)
-      sass (>= 3.5.2)
     builder (3.2.3)
     byebug (10.0.2)
     cancancan (2.2.0)
@@ -81,6 +75,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
+    commonjs (0.2.7)
     concurrent-ruby (1.0.5)
     coveralls (0.7.1)
       multi_json (~> 1.3)
@@ -115,6 +110,13 @@ GEM
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
     json (2.1.0)
+    less (2.6.0)
+      commonjs (~> 0.2.7)
+    less-rails (2.8.0)
+      actionpack (>= 4.0)
+      less (~> 2.6.0)
+      sprockets (> 2, < 4)
+      tilt
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -141,7 +143,6 @@ GEM
     nokogiri (1.8.4)
       mini_portile2 (~> 2.3.0)
     orm_adapter (0.5.0)
-    popper_js (1.12.9)
     public_suffix (3.0.2)
     puma (3.12.0)
     rack (2.0.5)
@@ -243,6 +244,11 @@ GEM
     turbolinks (5.1.1)
       turbolinks-source (~> 5.1)
     turbolinks-source (5.1.0)
+    twitter-bootstrap-rails (4.0.0)
+      actionpack (~> 5.0, >= 5.0.1)
+      execjs (~> 2.7)
+      less-rails (~> 2.8, >= 2.8.0)
+      railties (~> 5.0, >= 5.0.1)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     uglifier (4.1.15)
@@ -269,7 +275,6 @@ PLATFORMS
 DEPENDENCIES
   authority
   bootsnap (>= 1.1.0)
-  bootstrap (~> 4.1.1)
   byebug
   cancancan
   capybara (>= 2.15, < 4.0)
@@ -291,6 +296,7 @@ DEPENDENCIES
   spring-watcher-listen (~> 2.0.0)
   sqlite3
   turbolinks (~> 5)
+  twitter-bootstrap-rails
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console (>= 3.3.0)

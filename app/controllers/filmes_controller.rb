@@ -54,13 +54,13 @@ class FilmesController < ApplicationController
   # DELETE /filmes/1
   # DELETE /filmes/1.json
   def destroy
-    def updatable_by?(user)
-      resource.author == user || user.has_role?(:admin)
-    end
+    #def updatable_by?(user)
+    #  resource.author == user || user.has_role?(:admin)
+    #end
 
     @filme.destroy
     respond_to do |format|
-      format.html { redirect_to filmes_url, notice: 'Filme was successfully destroyed.' }
+      format.html { redirect_to home_index_path, notice: 'Filme was successfully destroyed.' }
     end
   end
 

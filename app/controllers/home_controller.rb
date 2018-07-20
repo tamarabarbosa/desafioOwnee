@@ -7,6 +7,8 @@ class HomeController < ApplicationController
       else
         format.html
       end
+      @generos = Genero.all
+      @filmes = Filme.all
     end
   end
 

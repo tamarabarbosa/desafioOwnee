@@ -68,4 +68,4 @@ gem 'authority'
 gem 'rolify'
 gem 'cancancan'
 gem "font-awesome-rails"
-gem 'bootstrap', '~> 4.1.1'
+gem "twitter-bootstrap-rails"

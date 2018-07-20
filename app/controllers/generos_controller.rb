@@ -10,6 +10,7 @@ class GenerosController < ApplicationController
   # GET /generos/1
   # GET /generos/1.json
   def show
+    @filmes = Filme.all
   end
 
   # GET /generos/new
@@ -58,15 +59,16 @@ class GenerosController < ApplicationController
   # DELETE /generos/1
   # DELETE /generos/1.json
   def destroy
-    def updatable_by?(user)
-      resource.author == user || user.has_role?(:admin)
-    end
-    
+
+    #def updatable_by?(user)
+    #  resource.author == user || user.has_role?(:admin)
+    #end
+
     @genero.destroy
     respond_to do |format|
-      format.html { redirect_to generos_url, notice: 'Genero was successfully destroyed.' }
+      format.html { redirect_to home_index_path, notice: 'Genero was successfully destroyed.' }
     end
-  end
+end
 
   private
     # Use callbacks to share common setup or constraints between actions.
